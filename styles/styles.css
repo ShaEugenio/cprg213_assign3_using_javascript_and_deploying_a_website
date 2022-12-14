@@ -1,4 +1,4 @@
-/************* your name: 
+/************* your name: Sha Eugenio
 
 INSTRUCTIONS:
 Comments starting with TO-DO have been included in this file to describe the needed styling: please translate these to the appropriate CSS declarations. 
@@ -15,6 +15,7 @@ You are discouraged from changing any provided CSS.
 
 
 /************* site defaults *************/
+
 body {
     width: 950px;
     margin: 0 auto;
@@ -23,11 +24,10 @@ body {
 }
 
 /* TO DO: all elements with the .flex class applied are to be made into flex-box containers. */
+
 .flex {
     display: flex; 
 }
-
- 
 
 /************* site-wide text styling *************/
 
@@ -43,45 +43,51 @@ body {
         - change the text colour to white, and 
         - change the cursor to pointer.
 */
+
 h1{
     font-size: 48px;
-    padding-top: 39px;
+    /* center vertically */
+    margin-top: 39px;
+    /* center horizontally */
+    /* 950px - 25px - 100px - 583.7px = 241.3px / 2 = 120.65px  */
+    margin-left: 120.65px;
 }
+
 h2{
     font-size: 36px;
     margin-bottom: 12px;
-    /* padding-top: 57px; */
 }
+
 .large-text{
     font-size: 24px;
 }
-.fake-button{
+
+/* specified every page class that has .fake-button because the submit button is not taking the line-height when only .fake-button is indicated */
+.index .fake-button,
+.booking-page .fake-button,
+.contact .fake-button{
     background-color: #E5AF42;
     text-align: center;
-    line-height: 30px;
+    line-height: 3;
     border: solid 1px black;
-    /* margin-right: 150px; */
-    padding: 20px;
-
 }
+
 a{
     text-decoration: none;
     color: black;
 }
+
 main a:hover,
 footer a:hover{
     text-decoration: underline;
 }
+
 .fake-button:hover,
 .blue-hover:hover{
     text-decoration: underline;
-    background-color: cornflowerblue;
+    background-color: #4278e5;
     color: white;
     cursor: pointer;
-}
-footer{
-    text-align: center;
-    padding: 20px 0;
 }
 
 /************* header/footer styling *************/
@@ -93,31 +99,30 @@ footer{
     - there will be 25px of space between the header and main, and 50px of space between main and footer.
     - the footer will be 60px tall, have a font-weight of 200, and the text within will be centered vertically and horizontally.
 */
+
 header,
 footer{
     background-color: #E5AF42;
 }
+
 header{
     height: 150px;
     margin-bottom: 25px;
 }
+
 header img{
     width: 100px;
     height: 100px;
     margin: 25px 0 25px 25px;
 }
-h1{
-    /* 950px - 25px - 100px - 583.7px = 241.3px / 2 = 120.65px  */
-    margin-left: 120.65px;
-}
-main{
-    margin-bottom: 50px;
-}
-footer{
-    height: 60px;
-    font-weight: 200px;
-}
 
+footer{
+    margin-top: 50px;
+    height: 60px;
+    font-weight: 200;
+    text-align: center;
+    padding: 30px 0;
+}
 
 /************* index page *************/
 
@@ -128,31 +133,36 @@ footer{
     - each fake-button on this page will be 250px wide with 150px of space between them.
     - the pair of fake-buttons will be centered on the page. HINT: can calculate the required margin to make them appear to be centered.
 */
+
 .about-us{
-    /* width: 50%; */
     float: left;
 }
+
 .index img{
     width: 300px;
     float: right;
     margin-left: 25px;
     margin-bottom: 50px;
 }
+
 .index h2{
     line-height: 36px;
 }
+
 .index p{
-    padding-bottom: 12px;
+    margin-bottom: 12px;
 }
+
 .index .fake-button{
     width: 250px;
     margin-right: 150px;
 }
-.index-fake-button1{
-    margin-left: 183px;
+/* added a class to existing element */
+.index-button1{
+    /* calculation to center buttons */
+    /* 950px - (250 + 150)px -250px = 300px / 2 = 150px */
+    margin-left: 150px;
 }
-
-
 
 /************* bookings page *************/
 
@@ -167,29 +177,36 @@ footer{
     - all items within the page will be centered within their available space.
 
 */
+
 .booking-page{
     width: 600px;
-    margin-left: 175px;
     font-size: 18px;
     text-align: center;
+    /* center booking page */
+    /* 950px - 600px = 350px / 2 = 175px */
+    margin-left: 175px;
 }
+
 .day-selector{
     margin-bottom: 12px;
 }
+
 .booking-page li{
     margin-right: 20px;
     width: 60px;
-    
-    
 }
+
 #monday{
-    margin-left: 90px;
+    /* center days buttons */
+    /* 600px - (4 * 82)px - 62px = 210px / 2 = 105px */
+    margin-left: 105px;
 }
 
 .booking-page li,
-.small-button{
+.booking-page .small-button{
     border: solid 1px black;
 }
+
 .small-button{
     padding: 5px;
 }
@@ -197,17 +214,17 @@ footer{
     margin-top: 24px;
     margin-bottom: 12px;
 }
+
 #clear-button{
     width: 200px;
+    /* center clear button */
+    /*  600px - 202px = 398px / 2 = 199px*/
+    margin-left: 199px;
 }
+
 .clicked{
     background-color: #E5AF42;
 }
-#clear-button
-{
-    margin-left: 179px;
-}
-
 
 /************* contact page *************/
 /* TO DO:
@@ -220,24 +237,33 @@ footer{
 
 .contact{
     height: 420px;
-    text-align: center;
-}
-.contact label{
-    /* float: left; */
-    width: 150px;
-    text-align: right;
     
 }
-.contact input{
-    /* float: right; */
-    width: 300px;
-  
+.contact h2{
+    text-align: center;
 }
+
+.contact label{
+    width: 150px;
+    text-align: right;
+    margin-right: 24px;
+}
+
+.contact input,
 #user-message{
-    float: right;
     width: 300px;
+}
+
+.contact form{
+    /* center columns */
+    /* 950px - 174px - 306px = 470px / 2 = 235px*/
+    margin-left: 235px;
+}
+
+#user-message{
     height: 150px;
 }
+
 .contact input,
 #user-message,
 .contact button{
@@ -246,13 +272,11 @@ footer{
     font-size: 16px;
     border: solid 1px black;
     margin-bottom: 24px;
-    /* margin-right: 50px; */
-    margin-left: 24px;
 }
-#submit-button{
+
+.contact .fake-button{
     width: 306px;
-    margin-left: 174px
-}
-.contact label{
-    margin-left: 235px;
+    /* align button with text area */
+    /* 150px + 24px = 174px  */
+    margin-left: 174px;
 }

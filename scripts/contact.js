@@ -5,11 +5,12 @@
 var submitButton = document.getElementById("submit-button");
 var contactPage = document.getElementById("contact-page");
 
-function changePage() {
+function submittedPage() {
     contactPage.innerHTML = '';
     const message = document.createElement("p");
     message.innerHTML = "Thank you for your message!";
     message.style.fontSize = '24px';
+    message.style.textAlign = "center";
     contactPage.append(message);
 }
-submitButton.addEventListener("click", changePage);
+submitButton.addEventListener("click", submittedPage);

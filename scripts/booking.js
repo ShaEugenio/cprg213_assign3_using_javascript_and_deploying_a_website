@@ -37,7 +37,7 @@ businessDays[4].addEventListener("click", function() {changingDays(businessDays[
 
 function resetButtons(){
     // resets all the day buttons in the array
-    for (i=0; i < businessDays.length; i++){  
+    for (var i = 0; i < businessDays.length; i++){  
     businessDays[i].classList.remove("clicked");
     }  
     // resets the calculated cost
