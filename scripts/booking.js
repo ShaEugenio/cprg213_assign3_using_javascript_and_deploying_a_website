@@ -11,7 +11,6 @@ var businessDays = [document.getElementById("monday"), document.getElementById("
 var clearButton = document.getElementById("clear-button");
 var halfDays = document.getElementById("half");
 var fullDays = document.getElementById("full");
-var totalCost = document.getElementById("calculated-cost");
 
 /********* colour change days of week *********/
 // when the day buttons are clicked, we will apply the "clicked" class to that element, and update any other relevant variables. Then, we can recalculate the total cost.
@@ -73,6 +72,7 @@ fullDays.addEventListener("click", fullDayService);
 // when a calculation is needed, set the innerHTML of the calculated-cost element to the appropriate value
 
 function calculateServiceCost(){
+    let totalCost = document.getElementById("calculated-cost");
     // calculates and updates the amount displayed
     totalCost.innerHTML = dailyRate * dayCounter;
 }
